@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guangxian · Support</title>
+<style>
+  :root { --bg:#0c1311; --card:#141b19; --line:#23302c; --teal:#3cc4a2; --text:#e8eeec; --sub:#9fb0aa; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  header { text-align:center; margin-bottom:36px; }
+  .logo {
+    width:72px; height:72px; border-radius:18px; margin:0 auto 14px;
+    background:linear-gradient(135deg,#1f5a4d,#0d2a25);
+    display:flex; align-items:center; justify-content:center;
+    font-size:34px; box-shadow:0 6px 20px rgba(0,0,0,.4);
+  }
+  h1 { font-size:24px; margin:6px 0 4px; }
+  .tagline { color:var(--sub); font-size:14px; margin:0; }
+  h2 { font-size:17px; margin:30px 0 12px; color:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .label { color:var(--sub); font-size:13px; }
+  .value { font-size:15px; font-weight:600; word-break:break-all; }
+  .copy { border:none; background:rgba(60,196,162,.16); color:var(--teal);
+    padding:6px 14px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .copy:active { opacity:.6; }
+  .q { font-weight:600; margin:0 0 4px; }
+  .a { color:var(--sub); font-size:14px; margin:0; }
+  .faq + .faq { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  a { color:var(--teal); text-decoration:none; }
+  footer { text-align:center; color:#5f6f6a; font-size:12px; margin-top:36px; }
+  .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%) translateY(20px);
+    background:#222; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px;
+    opacity:0; pointer-events:none; transition:.25s; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎬</div>
+      <h1>Guangxian · Support</h1>
+      <p class="tagline">Professional Vlog color grading &amp; editing tool</p>
+    </header>
+
+    <h2>Contact Us</h2>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">Support email</div>
+          <div class="value" id="email">joyho888@qq.com</div>
+        </div>
+        <button class="copy" onclick="copy('joyho888@qq.com','Email copied')">Copy</button>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">WeChat</div>
+          <div class="value" id="wechat">392903112</div>
+        </div>
+        <button class="copy" onclick="copy('392903112','WeChat ID copied')">Copy</button>
+      </div>
+    </div>
+    <p class="a" style="margin:6px 2px 0;">We usually reply within 24 hours.</p>
+
+    <h2>FAQ</h2>
+    <div class="card">
+      <div class="faq">
+        <p class="q">Free trial &amp; purchase</p>
+        <p class="a">Guangxian offers a 7-day free trial with watermark-free exports during the trial. After the trial, exports include a watermark. A one-time purchase of the “Pro” version removes the watermark permanently, and future features are free upgrades.</p>
+      </div>
+      <div class="faq">
+        <p class="q">I got a new phone — how do I restore my purchase?</p>
+        <p class="a">Open “Membership” and tap “Restore Purchase,” then sign in with your original Apple ID to restore your lifetime access — no need to pay again.</p>
+      </div>
+      <div class="faq">
+        <p class="q">My exported video has a watermark?</p>
+        <p class="a">Exports include a watermark after the trial ends if you haven’t purchased. Once you buy the “Pro” version, exports are watermark-free in full HD.</p>
+      </div>
+      <div class="faq">
+        <p class="q">Which devices are supported?</p>
+        <p class="a">iPhones running iOS 17.0 or later (iPhone XS / XR and newer).</p>
+      </div>
+      <div class="faq">
+        <p class="q">Will my footage be uploaded?</p>
+        <p class="a">No. All color grading, editing, and exporting happen locally on your device. The app never uploads any photos or videos — your privacy is safe.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I uninstall the app?</p>
+        <p class="a">On the Home Screen, press and hold the “Guangxian” icon and choose “Remove App → Delete App.” Your Pro purchase is tied to your Apple ID; after reinstalling, tap “Restore Purchase” in “Membership” to recover it — nothing is lost.</p>
+      </div>
+      <div class="faq">
+        <p class="q">How do I request a refund?</p>
+        <p class="a">In-app purchases are handled by Apple, so refunds must be requested from Apple: go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with the Apple ID used for the purchase, find your “Guangxian” purchase, choose “Request a refund,” enter a reason, and submit. You can also start from iPhone “Settings → Apple Account → Media &amp; Purchases → Purchase History.” Whether a refund is granted is decided by Apple.</p>
+      </div>
+    </div>
+
+    <h2>Terms</h2>
+    <div class="card">
+      <div class="row">
+        <div class="value" style="font-weight:500;">Privacy Policy</div>
+        <a href="https://kuangrensuibi.github.io/Guangxian/privacy-policy.en.html" target="_blank" rel="noopener">View →</a>
+      </div>
+      <div class="row">
+        <div class="value" style="font-weight:500;">User Agreement</div>
+        <a href="https://kuangrensuibi.github.io/Guangxian/user-agreement.en.html" target="_blank" rel="noopener">View →</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Guangxian · All rights reserved.</footer>
+  </div>
+
+  <div class="toast" id="toast">Copied</div>
+  <script>
+    function copy(text, label){
+      navigator.clipboard.writeText(text).then(function(){
+        var t=document.getElementById('toast');
+        t.textContent=label;
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

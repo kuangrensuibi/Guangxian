@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guangxian · サポート</title>
+<style>
+  :root { --bg:#0c1311; --card:#141b19; --line:#23302c; --teal:#3cc4a2; --text:#e8eeec; --sub:#9fb0aa; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  header { text-align:center; margin-bottom:36px; }
+  .logo {
+    width:72px; height:72px; border-radius:18px; margin:0 auto 14px;
+    background:linear-gradient(135deg,#1f5a4d,#0d2a25);
+    display:flex; align-items:center; justify-content:center;
+    font-size:34px; box-shadow:0 6px 20px rgba(0,0,0,.4);
+  }
+  h1 { font-size:24px; margin:6px 0 4px; }
+  .tagline { color:var(--sub); font-size:14px; margin:0; }
+  h2 { font-size:17px; margin:30px 0 12px; color:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .label { color:var(--sub); font-size:13px; }
+  .value { font-size:15px; font-weight:600; word-break:break-all; }
+  .copy { border:none; background:rgba(60,196,162,.16); color:var(--teal);
+    padding:6px 14px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .copy:active { opacity:.6; }
+  .q { font-weight:600; margin:0 0 4px; }
+  .a { color:var(--sub); font-size:14px; margin:0; }
+  .faq + .faq { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  a { color:var(--teal); text-decoration:none; }
+  footer { text-align:center; color:#5f6f6a; font-size:12px; margin-top:36px; }
+  .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%) translateY(20px);
+    background:#222; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px;
+    opacity:0; pointer-events:none; transition:.25s; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🎬</div>
+      <h1>Guangxian · サポート</h1>
+      <p class="tagline">プロ向け Vlog カラーグレーディング＆編集ツール</p>
+    </header>
+
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">サポートメール</div>
+          <div class="value" id="email">joyho888@qq.com</div>
+        </div>
+        <button class="copy" onclick="copy('joyho888@qq.com','メールをコピーしました')">コピー</button>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">WeChat</div>
+          <div class="value" id="wechat">392903112</div>
+        </div>
+        <button class="copy" onclick="copy('392903112','WeChat ID をコピーしました')">コピー</button>
+      </div>
+    </div>
+    <p class="a" style="margin:6px 2px 0;">通常 24 時間以内に返信いたします。</p>
+
+    <h2>よくある質問</h2>
+    <div class="card">
+      <div class="faq">
+        <p class="q">無料トライアルと購入</p>
+        <p class="a">Guangxian は 7 日間の無料トライアルを提供しており、トライアル期間中は透かしなしで書き出せます。トライアル終了後は書き出しに透かしが入ります。買い切りの「Pro 版」を購入すると透かしを永久に削除でき、今後の新機能も無料でアップグレードできます。</p>
+      </div>
+      <div class="faq">
+        <p class="q">機種変更しました。購入済みの権利を復元するには？</p>
+        <p class="a">「会員センター」で「購入を復元」をタップし、元の Apple ID でサインインすると永久権利を復元できます。再度の支払いは不要です。</p>
+      </div>
+      <div class="faq">
+        <p class="q">書き出した動画に透かしが入る？</p>
+        <p class="a">トライアル終了後、未購入の場合は書き出しに透かしが入ります。「Pro 版」を購入すると、透かしなしの高画質で書き出せます。</p>
+      </div>
+      <div class="faq">
+        <p class="q">対応デバイスは？</p>
+        <p class="a">iOS 17.0 以降を搭載した iPhone（iPhone XS / XR 以降）に対応しています。</p>
+      </div>
+      <div class="faq">
+        <p class="q">素材はアップロードされますか？</p>
+        <p class="a">いいえ。カラーグレーディング・編集・書き出しはすべて端末内で完了します。App は写真や動画をアップロードしないため、プライバシーは安全です。</p>
+      </div>
+      <div class="faq">
+        <p class="q">App のアンインストール方法は？</p>
+        <p class="a">ホーム画面で「Guangxian」アイコンを長押しし、「App を取り除く → App を削除」を選択してください。購入済みの Pro 権利は Apple ID に紐づいており、再インストール後に「会員センター」で「購入を復元」をタップすれば復元できます。失われることはありません。</p>
+      </div>
+      <div class="faq">
+        <p class="q">返金の申請方法は？</p>
+        <p class="a">アプリ内課金は Apple が一括で処理するため、返金も Apple に申請する必要があります：<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> にアクセスし、購入時の Apple ID でサインインして「Guangxian」の購入記録を見つけ、「払い戻しをリクエスト」を選択して理由を記入し送信してください。iPhone の「設定 → Apple アカウント → メディアと購入 → 購入履歴」からも申請できます。返金の可否は Apple の審査により決定されます。</p>
+      </div>
+    </div>
+
+    <h2>関連規約</h2>
+    <div class="card">
+      <div class="row">
+        <div class="value" style="font-weight:500;">プライバシーポリシー</div>
+        <a href="https://kuangrensuibi.github.io/Guangxian/privacy-policy.ja.html" target="_blank" rel="noopener">表示 →</a>
+      </div>
+      <div class="row">
+        <div class="value" style="font-weight:500;">利用規約</div>
+        <a href="https://kuangrensuibi.github.io/Guangxian/user-agreement.ja.html" target="_blank" rel="noopener">表示 →</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Guangxian · All rights reserved.</footer>
+  </div>
+
+  <div class="toast" id="toast">コピーしました</div>
+  <script>
+    function copy(text, label){
+      navigator.clipboard.writeText(text).then(function(){
+        var t=document.getElementById('toast');
+        t.textContent=label;
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
